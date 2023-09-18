@@ -45,7 +45,7 @@ async function dbconnection() {
         // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.score" :{$gt: 70},"address.coord" : {$lt : -65.754168}}).toArray()
 
         // Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belonging to the borough Brooklyn. The document must be displayed according to the cuisine in descending order.
-        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.grade" :"A","borough":{$ne:Brooklyn}}).toArray()
+        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.grade" :"A","borough":{$ne:"Brooklyn"}}).toArray()
         
         //Write a MongoDB query to find the restaurant Id, name, borough, and cuisine for those restaurants which contain 'Wil' as the first three letters of their name.
         // const data = await db.collection("restaurants").find({name: /^Wil/},{projection:{restaurant_id : 1,name:1,borough:1,cuisine :1}}).toArray()
@@ -69,7 +69,7 @@ async function dbconnection() {
         // const data = await db.collection("restaurants").find({"grades.score" :{ $not:{$gt : 10}}} ,{projection:{restaurant_id : 1,name:1,borough:1,cuisine :1}}).toArray()
         
         // Write a MongoDB query to find the restaurant Id, name, borough, and cuisine for those restaurants which prepared dishes except 'American' and 'Chinees' or the restaurant's name begins with the letter 'Wil'.  
-        // const data = await db.collection("restaurants").find({$or: [{name: /^Wil/}, {$and: [{cuisine : {$ne :"American "}},{cuisine : {$ne :"Chinees"}}]}]},{projection:{restaurant_id : 1,name:1,borough:1,cuisine :1}}).toArray()
+        // const data = await db.collection("restaurants").find({$or: [{name: /^Wil/}, {cuisine:{$nin:["American ","Chinese"]}}]},{projection:{restaurant_id : 1,name:1,borough:1,cuisine :1}}).toArray()
         
         //Write a MongoDB query to find the restaurant Id, name, and grades for those restaurants which achieved a grade of "A" and scored 11 on an ISODate "2014-08-11T00:00:00Z" among many survey dates.
         // const data = await db.collection("restaurants").find({grades : {$elemMatch: {date: new Date("2014-08-11T00:00:00Z"), grade:"A", score:11}}}, {projection:{restaurant_id:1,name:1,grades:1}}).toArray()
