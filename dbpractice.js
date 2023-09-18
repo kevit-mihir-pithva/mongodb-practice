@@ -45,7 +45,7 @@ async function dbconnection() {
         // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.score" :{$gt: 70},"address.coord" : {$lt : -65.754168}}).toArray()
 
         // Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belonging to the borough Brooklyn. The document must be displayed according to the cuisine in descending order.
-        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.grade" :"A","borough":{$ne:"Brooklyn"}}).toArray()
+        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.grade" :"A","borough":{$ne:"Brooklyn"}}).sort({cuisine:-1}).toArray()
         
         //Write a MongoDB query to find the restaurant Id, name, borough, and cuisine for those restaurants which contain 'Wil' as the first three letters of their name.
         // const data = await db.collection("restaurants").find({name: /^Wil/},{projection:{restaurant_id : 1,name:1,borough:1,cuisine :1}}).toArray()
