@@ -42,7 +42,7 @@ async function dbconnection() {
         // const data = await db.collection("restaurants").find({$and:[{"cuisine" : {$ne :"American "}},{"grades.score" : {$gt : 70}},{"address.coord" : {$lt : -65.754168}}]}).toArray()
 
         // Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American' and achieved a score of more than 70 and located in the longitude less than -65.754168. Note: Do this query without using $and operator.
-        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.score" :{$gt: 70},"address.coord" : {$lt : -65.754168}}).toArray()
+        // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.score" :{$gt: 70},"address.coord.1" : {$lt : -65.754168}}).toArray()
 
         // Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belonging to the borough Brooklyn. The document must be displayed according to the cuisine in descending order.
         // const data = await db.collection("restaurants").find({"cuisine" : {$ne : "American "}, "grades.grade" :"A","borough":{$ne:"Brooklyn"}}).sort({cuisine:-1}).toArray()
