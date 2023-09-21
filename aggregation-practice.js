@@ -36,10 +36,10 @@ async function dbconnection() {
         // const data = await db.collection("player").aggregate([
         //     {
         //         $group:{
-                    // _id:{
-                    //     country:"$Country",
-                    //     battingHand:"$Batting_Hand"
-                    // },
+        //             _id:{
+        //                 country:"$Country",
+        //                 battingHand:"$Batting_Hand"
+        //             },
         //             numberOfPlayers:{
         //                 $sum:1
         //             }
@@ -51,7 +51,7 @@ async function dbconnection() {
         // const data = await db.collection("player").aggregate([
         //     {
         //         $match:{
-        //             Batting_Hand:{
+        //             Batting_Hand:{ 
         //                 $ne:null
         //             }
         //         }
